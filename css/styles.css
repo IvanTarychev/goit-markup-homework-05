@@ -767,7 +767,7 @@ ul {
 
 .modal-close:hover,
 .modal-close:focus {
-  background-color: var(--modal-bg-color);
+  fill: var(--hover-color);
 }
 
 .icon-cross {
