@@ -729,6 +729,9 @@ ul {
   width: 100%;
   height: 100%;
   background-color: var(--modal-bg-color);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -736,17 +739,23 @@ ul {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: scale(1.2) translate(-50%, -50%);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
 
   background-color: var(--white-color);
+
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
